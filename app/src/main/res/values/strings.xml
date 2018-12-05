@@ -8,4 +8,8 @@
     <string name="action_settings">Settings</string>
     <string name="impala_cafeteria">Impala Cafeteria</string>
     <string name="impalacafeteria_gmail_com">impalacafeteria@gmail.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="s_o_centenas_de_pessoas_atendidas_centenas_de_hist_rias_centenas_de_x_caras_de_caf_e_salgados_centenas_de_bate_papo_e_reuni_es_centenas_de_satisfa_es_nossa_gama_de_servi_os_nos_possibilitam_levar_nossos_produtos_para_dentro_de_centenas_de_lares_atrav_s_da_nossas_linhas_de_produtos">São centenas de pessoas atendidas, centenas de histórias, centenas de xícaras de café e salgados, centenas de bate papo e reuniões, centenas de satisfações! Nossa gama de serviços, nos possibilitam, levar nossos produtos para dentro de centenas de lares, através da nossas linhas de produtos</string>
 </resources>

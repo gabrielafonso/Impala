@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textViewServicos"
+        android:layout_width="1dp"
+        android:layout_height="453dp"
+        android:text="@string/s_o_centenas_de_pessoas_atendidas_centenas_de_hist_rias_centenas_de_x_caras_de_caf_e_salgados_centenas_de_bate_papo_e_reuni_es_centenas_de_satisfa_es_nossa_gama_de_servi_os_nos_possibilitam_levar_nossos_produtos_para_dentro_de_centenas_de_lares_atrav_s_da_nossas_linhas_de_produtos"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</android.support.constraint.ConstraintLayout>
