@@ -1,13 +1,15 @@
 package com.example.afonsogabriel.impala.activity;
 
-public class Produtos {
+import android.support.v7.app.AppCompatActivity;
+
+public class ProdutosActivity extends AppCompatActivity {
     private String titulo;
     private int imagem;
 
-    public Produtos() {
+    public ProdutosActivity() {
     }
 
-    public Produtos(String titulo, int imagem) {
+    public ProdutosActivity(String titulo, int imagem) {
         this.titulo = titulo;
         this.imagem = imagem;
     }

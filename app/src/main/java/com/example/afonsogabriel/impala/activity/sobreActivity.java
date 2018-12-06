@@ -20,12 +20,9 @@ public class sobreActivity extends AppCompatActivity {
 
                 .setImage(R.drawable.logo_principal)
                 .addGroup("Contato")
-                .addEmail("impalacafeteria@gmail.com")
-               // .addWebsite("http://www.mcdonalds.com.br/")
-               // .addGroup("Redes Socias")
-                //.addFacebook("McDonaldsBrasil")
-               // .addTwitter("McDonalds_BR")
-               // .addInstagram("mcdonalds_br")
+                .addEmail("reinoimpalacafeteria@gmail.com")
+                .addTwitter("ICafeteria")
+               .addInstagram("impalacafeteria")
                 .create();
 
         setContentView(sobre);

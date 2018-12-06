@@ -1,4 +1,4 @@
-package com.example.afonsogabriel.impala.activity;
+package com.example.afonsogabriel.impala.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,20 +9,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.afonsogabriel.impala.R;
+import com.example.afonsogabriel.impala.activity.ProdutosActivity;
 
 import java.util.List;
 
 public class AdapterProdutos extends RecyclerView.Adapter<AdapterProdutos.ViewHolder> {
 
-    List<Produtos> produtos;
+    private List<ProdutosActivity> produtos;
 
-    public AdapterProdutos(List<Produtos> produtos){
+    public AdapterProdutos(List<ProdutosActivity> produtos){
         this.produtos = produtos;
     }
 
     @NonNull
     @Override//Responsavel por criar as visualizações(cardview) na memoria RAM
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
+                                         int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_produto, parent, false);
@@ -35,7 +37,7 @@ public class AdapterProdutos extends RecyclerView.Adapter<AdapterProdutos.ViewHo
     @Override//Responsavel por criar as visualizações(cardview) na tela do celular
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Produtos postagem = produtos.get(position);
+        ProdutosActivity postagem = produtos.get(position);
 
         holder.textTitulo.setText(postagem.getTitulo());
         holder.imagemProduto.setImageResource(postagem.getImagem());

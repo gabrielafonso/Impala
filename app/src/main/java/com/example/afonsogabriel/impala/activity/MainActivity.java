@@ -3,7 +3,6 @@ package com.example.afonsogabriel.impala.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.afonsogabriel.impala.Adapter.AdapterProdutos;
 import com.example.afonsogabriel.impala.R;
 import com.example.afonsogabriel.impala.fragment.produtosFragment;
 import com.example.afonsogabriel.impala.fragment.servicosFragment;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
    private RecyclerView recyclerView;
-    private List<Produtos> produtos = new ArrayList<>();
+    private List<ProdutosActivity> produtos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +39,17 @@ public class MainActivity extends AppCompatActivity
         //carregar lista
         criarProdutos();
 
-       recyclerView = findViewById(R.id.r);
-//
-//        //definir layoutManager
-//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-//        //Passar de lado
-//        //((LinearLayoutManager) layoutManager).setOrientation(LinearLayout.HORIZONTAL);
-//        recyclerView.setLayoutManager(layoutManager);
-//
-//        recyclerView.setHasFixedSize(true);
+       //recyclerView = findViewById(R.id.re);
 
-        //adapter
+        //definir layoutManager
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        //Passar de lado
+        //((LinearLayoutManager) layoutManager).setOrientation(LinearLayout.HORIZONTAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+        recyclerView.setHasFixedSize(true);
+
+
         AdapterProdutos adapterProdutos = new AdapterProdutos(produtos);
         recyclerView.setAdapter(adapterProdutos);
 
@@ -123,12 +123,10 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_contato) {
             enviarEmail();
-
         }
-        //falta ajeitar
-//        else if (id == R.id.nav_sobre) {
-//            startActivity(new Intent(this, sobreActivity.class));
-//        }
+        else if (id == R.id.nav_sobre) {
+            startActivity(new Intent(this, sobreActivity.class));
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -143,7 +141,7 @@ public class MainActivity extends AppCompatActivity
     }
     private void enviarEmail() {
         Intent email = new Intent(Intent.ACTION_SEND);
-        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"impalacafeteria@gmail.com"});
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"reinoimpalacafeteria@gmail.com"});
         email.putExtra(Intent.EXTRA_SUBJECT, "Contato pelo APP");
         email.putExtra(Intent.EXTRA_TEXT, "Agora é a sua vez! Envie sugestões e feedback de nossa loja e atendimento.");
 
@@ -156,13 +154,13 @@ public class MainActivity extends AppCompatActivity
 
     public void criarProdutos(){
 
-        produtos.add(new Produtos("Partiu Dubai",  R.drawable.pao_baguete));
+        produtos.add(new ProdutosActivity("Partiu Dubai",  R.drawable.pao_baguete));
 
-        produtos.add(new Produtos("Dubai",  R.drawable.bolo));
+        produtos.add(new ProdutosActivity("Dubai",  R.drawable.bolo));
 
-        produtos.add(new Produtos("Mozão",  R.drawable.cafe_sobre));
+        produtos.add(new ProdutosActivity("Mozão",  R.drawable.cafe_sobre));
 
-        produtos.add(new Produtos("Lua de mel",  R.drawable.croissants));
+        produtos.add(new ProdutosActivity("Lua de mel",  R.drawable.croissants));
 
 
     }

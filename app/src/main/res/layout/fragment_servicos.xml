@@ -30,8 +30,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="40dp"
-        android:text="São centenas de pessoas atendidas, centenas de histórias, centenas de xícaras de café e salgados, centenas de bate papo e reuniões, centenas de satisfações!
-Nossa gama de serviços, nos possibilitam, levar nossos produtos para dentro de centenas de lares, através da nossas linhas de produtos pré-prontos."
+        android:text="São centenas de pessoas atendidas, centenas de histórias, centenas de xícaras de café e salgados, centenas de bate papo e reuniões, centenas de satisfações! Nossa gama de serviços, nos possibilitam, levar nossos produtos para dentro de centenas de lares, através da nossas linhas de produtos pré-prontos."
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/colorPrimaryDark"
