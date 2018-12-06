@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,15 +19,40 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.afonsogabriel.impala.R;
+import com.example.afonsogabriel.impala.fragment.produtosFragment;
 import com.example.afonsogabriel.impala.fragment.servicosFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+   private RecyclerView recyclerView;
+    private List<Produtos> produtos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //carregar lista
+        criarProdutos();
+
+       recyclerView = findViewById(R.id.r);
+//
+//        //definir layoutManager
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+//        //Passar de lado
+//        //((LinearLayoutManager) layoutManager).setOrientation(LinearLayout.HORIZONTAL);
+//        recyclerView.setLayoutManager(layoutManager);
+//
+//        recyclerView.setHasFixedSize(true);
+
+        //adapter
+        AdapterProdutos adapterProdutos = new AdapterProdutos(produtos);
+        recyclerView.setAdapter(adapterProdutos);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -87,8 +114,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.nav_produtos) {
+            carregarFragment(new produtosFragment());
         } else if (id == R.id.nav_servico) {
             carregarFragment(new servicosFragment());
 
@@ -97,9 +124,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contato) {
             enviarEmail();
 
-        } else if (id == R.id.nav_sobre) {
-            startActivity(new Intent(this, sobreActivity.class));
         }
+        //falta ajeitar
+//        else if (id == R.id.nav_sobre) {
+//            startActivity(new Intent(this, sobreActivity.class));
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -123,5 +152,18 @@ public class MainActivity extends AppCompatActivity
 //       email.setType("application/pdf"); //pdf
 //        email.setType("image/png");   //imagem
         startActivity(Intent.createChooser(email, "Escolha o APP de e-mail:"));
+    }
+
+    public void criarProdutos(){
+
+        produtos.add(new Produtos("Partiu Dubai",  R.drawable.pao_baguete));
+
+        produtos.add(new Produtos("Dubai",  R.drawable.bolo));
+
+        produtos.add(new Produtos("Mozão",  R.drawable.cafe_sobre));
+
+        produtos.add(new Produtos("Lua de mel",  R.drawable.croissants));
+
+
     }
 }
