@@ -28,31 +28,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-   private RecyclerView recyclerView;
-    private List<ProdutosActivity> produtos = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //carregar lista
-        criarProdutos();
-
-       //recyclerView = findViewById(R.id.re);
-
-        //definir layoutManager
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        //Passar de lado
-        //((LinearLayoutManager) layoutManager).setOrientation(LinearLayout.HORIZONTAL);
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setHasFixedSize(true);
-
-
-        AdapterProdutos adapterProdutos = new AdapterProdutos(produtos);
-        recyclerView.setAdapter(adapterProdutos);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -72,6 +51,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Fragment fragment = new produtosFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frameContainer, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -115,7 +99,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_produtos) {
-            carregarFragment(new produtosFragment());
+           carregarFragment(new produtosFragment());
         } else if (id == R.id.nav_servico) {
             carregarFragment(new servicosFragment());
 
@@ -152,16 +136,16 @@ public class MainActivity extends AppCompatActivity
         startActivity(Intent.createChooser(email, "Escolha o APP de e-mail:"));
     }
 
-    public void criarProdutos(){
-
-        produtos.add(new ProdutosActivity("Partiu Dubai",  R.drawable.pao_baguete));
-
-        produtos.add(new ProdutosActivity("Dubai",  R.drawable.bolo));
-
-        produtos.add(new ProdutosActivity("Mozão",  R.drawable.cafe_sobre));
-
-        produtos.add(new ProdutosActivity("Lua de mel",  R.drawable.croissants));
-
-
-    }
+//    public void criarProdutos(){
+//
+//        produtos.add(new ProdutosActivity("Pao",  R.drawable.pao_baguete));
+//
+//        produtos.add(new ProdutosActivity("Bolo",  R.drawable.bolo));
+//
+//        produtos.add(new ProdutosActivity("Café",  R.drawable.cafe_sobre));
+//
+//        produtos.add(new ProdutosActivity("Croissants",  R.drawable.croissants));
+//
+//
+//    }
 }

@@ -1,162 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.v7.widget.CardView
-
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="12dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewFragmentProdutos"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:layout_width="match_parent"
+        android:layout_margin="6dp"></android.support.v7.widget.RecyclerView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-            android:id="@+id/textTitulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Os mais variados tipos de pães e sabores"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-
-            <ImageView
-                android:id="@+id/imagemProduto"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/pao_baguete" />
-
-            <TextView
-                android:id="@+id/textTitulo2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bolos Deliciosos"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-
-            <ImageView
-                android:id="@+id/bolo"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/bolo"
-                android:contentDescription="TODO" />
-
-            <TextView
-                android:id="@+id/textTitulo3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Diversos tipos de café"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-
-            <ImageView
-                android:id="@+id/imagemProduto3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/cafe_sobre"
-                android:contentDescription="TODO" />
-
-            <TextView
-                android:id="@+id/textTitulo4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Os melhores salgados"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-
-            <ImageView
-                android:id="@+id/imagemProduto4"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/croissants"
-                android:contentDescription="TODO" />
-
-            <!--<TextView-->
-                <!--android:id="@+id/textTitulo5"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Pão de queijo"-->
-                <!--android:textSize="18dp"-->
-                <!--android:textStyle="bold" />-->
-
-
-            <!--<ImageView-->
-                <!--android:id="@+id/imagemProduto5"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="200dp"-->
-                <!--android:scaleType="centerCrop"-->
-                <!--app:srcCompat="@drawable/pao_queiijo"-->
-                <!--android:contentDescription="TODO" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/textTitulo6"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Sanduíches que dão água na boca"-->
-                <!--android:textSize="18dp"-->
-                <!--android:textStyle="bold" />-->
-
-
-            <!--<ImageView-->
-                <!--android:id="@+id/imagemProduto6"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="200dp"-->
-                <!--android:scaleType="centerCrop"-->
-                <!--app:srcCompat="@drawable/sanduiche"-->
-                <!--android:contentDescription="TODO" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/textTitulo7"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Doces que te levam para outra dimensão"-->
-                <!--android:textSize="18dp"-->
-                <!--android:textStyle="bold" />-->
-
-
-            <!--<ImageView-->
-                <!--android:id="@+id/imagemProduto7"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="200dp"-->
-                <!--android:scaleType="centerCrop"-->
-                <!--app:srcCompat="@drawable/torta_morango"-->
-                <!--android:contentDescription="TODO" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/textTitulo8"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Os mais variados sabores de sucos da fruta"-->
-                <!--android:textSize="18dp"-->
-                <!--android:textStyle="bold" />-->
-
-
-            <!--<ImageView-->
-                <!--android:id="@+id/imagemProduto8"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="200dp"-->
-                <!--android:scaleType="centerCrop"-->
-                <!--app:srcCompat="@drawable/suco"-->
-                <!--android:contentDescription="TODO" />-->
-
-        </LinearLayout>
-    </LinearLayout>
-
-</android.support.v7.widget.CardView>
+</LinearLayout>
 

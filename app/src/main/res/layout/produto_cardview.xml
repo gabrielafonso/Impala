@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cardview_id"
+    android:contextClickable="true"
+    android:layout_margin="5dp"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imagem"
+            android:layout_width="380dp"
+            android:layout_height="220dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="#aeaeae"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:paddingBottom="10dp"
+            android:text="hoje no google"
+            android:textAlignment="center"
+            android:textColor="#2c2c2c"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#e0e0e0"
+            android:focusable="false" />
+
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

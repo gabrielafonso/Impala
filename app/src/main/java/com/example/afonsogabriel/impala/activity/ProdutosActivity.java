@@ -1,32 +1,37 @@
 package com.example.afonsogabriel.impala.activity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.afonsogabriel.impala.R;
 
 public class ProdutosActivity extends AppCompatActivity {
-    private String titulo;
-    private int imagem;
 
-    public ProdutosActivity() {
-    }
+    private TextView tTitulo;
+    private ImageView mImagem;
 
-    public ProdutosActivity(String titulo, int imagem) {
-        this.titulo = titulo;
-        this.imagem = imagem;
-    }
+    @SuppressLint("WrongViewCast")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_produtos);
 
-    public String getTitulo() {
-        return titulo;
-    }
+        tTitulo = findViewById(R.id.textTitulo);
+        mImagem = findViewById(R.id.okImagem);
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+        Intent intent = getIntent();
+        String textoTitulo = intent.getExtras().getString("Doces");
+        int okImagem = intent.getExtras().getInt("");
 
-    public int getImagem() {
-        return imagem;
-    }
+        //atribuindo valores
 
-    public void setImagem(int imagem) {
-        this.imagem = imagem;
-    }
+        tTitulo.setText(textoTitulo);
+        mImagem.setImageResource(okImagem);
+
+
+}
 }
