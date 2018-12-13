@@ -41,7 +41,7 @@ public class AdapterProdutos extends RecyclerView.Adapter<AdapterProdutos.ViewHo
 
 
     @Override//Responsavel por criar as visualizações(cardview) na tela do celular
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
 
        Produto produto = produtos.get(position);
        holder.titulo.setText(produto.getTitulo());
