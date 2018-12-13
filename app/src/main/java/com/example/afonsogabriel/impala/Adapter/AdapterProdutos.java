@@ -2,6 +2,8 @@ package com.example.afonsogabriel.impala.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+//import android.support.v7.widget.CardView;
+//import android.support.v7.widget.CardView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -61,7 +63,7 @@ public class AdapterProdutos extends RecyclerView.Adapter<AdapterProdutos.ViewHo
            ImageView imagem;
            CardView cardView;
 
-            public ViewHolder(View itemView) {
+            public ViewHolder(@NonNull View itemView) {
 
                 super(itemView);
 
